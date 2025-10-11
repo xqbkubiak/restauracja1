@@ -63,7 +63,7 @@ function MapWithOpinie() {
                 className="inline-flex items-center justify-center h-9 px-4 rounded-xl"
                 style={{ backgroundColor: "var(--primary)", color: "var(--primary-foreground)" }}
               >
-                Oceń Nas
+                Oceń Nas!
               </a>
               <a
                 href={MAPS_DIRECTIONS_URL}
