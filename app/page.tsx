@@ -1,15 +1,23 @@
 "use client"
 
 import { Header } from "@/components/header"
-// hero jest inline, żeby uniknąć problemów SSR z window
 import { MenuSection } from "@/components/menu-section"
 import { About } from "@/components/about"
 import { Gallery } from "@/components/gallery"
 
-const MAPS_OPINIE_URL =
-  "https://www.google.com/maps/search/?api=1&query=Restauracja+Na+Ludowej+Ludowa+9+66-500+Strzelce+Kraje%C5%84skie#opinie"
+// --- Stałe lokalizacji ---
+const PLACE_NAME = "Restauracja Na Ludowej"
+const PLACE_ADDR = "Ludowa 9, 66-500 Strzelce Krajeńskie"
 
-/** Mapa z kartą w dolnym lewym rogu i klikalnymi opiniami */
+// Link do wizytówki / opinii
+const MAPS_PLACE_URL =
+  "https://www.google.com/maps/search/?api=1&query=Restauracja+Na+Ludowej+Ludowa+9+66-500+Strzelce+Kraje%C5%84skie"
+
+// Link do nawigacji (ustaw destination na adres)
+const MAPS_DIRECTIONS_URL =
+  "https://www.google.com/maps/dir/?api=1&destination=Ludowa+9,+66-500+Strzelce+Kraje%C5%84skie"
+
+// ——— Mapa z kartą (przyciski: Odwiedź nas, Nawiguj) ———
 function MapWithOpinie() {
   return (
     <section id="contact" className="relative max-w-6xl mx-auto px-4 md:px-6 py-12">
@@ -23,8 +31,9 @@ function MapWithOpinie() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           className="bg-white"
+          title="Mapa – Restauracja Na Ludowej"
         />
-        {/* Karta jak na screenie — lewy dół, z linkiem do opinii */}
+        {/* Karta info w lewym dolnym rogu */}
         <div className="absolute left-4 bottom-4">
           <div
             className="rounded-2xl px-5 py-4 shadow-lg"
@@ -34,21 +43,38 @@ function MapWithOpinie() {
               border: "1px solid var(--border)",
             }}
           >
-            <div className="font-serif text-lg mb-1">Na Ludowej</div>
+            <div className="font-serif text-lg mb-1">{PLACE_NAME}</div>
             <div style={{ color: "var(--muted-foreground)" }} className="text-sm">
-              Ludowa 9, 66-500 Strzelce Krajeńskie
+              {PLACE_ADDR}
             </div>
-            <a
-              href={MAPS_OPINIE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-2"
-              style={{ color: "color-mix(in oklch, var(--primary) 90%, black 10%)" }}
-            >
+
+            <div className="mt-3 flex items-center gap-2 text-sm">
               <span aria-hidden>★</span>
               <span className="font-semibold">4.5</span>
               <span style={{ color: "var(--muted-foreground)" }}>(438 opinii)</span>
-            </a>
+            </div>
+
+            {/* Przyciski akcji */}
+            <div className="mt-4 flex flex-wrap items-center gap-2">
+              <a
+                href={MAPS_PLACE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center h-9 px-4 rounded-xl"
+                style={{ backgroundColor: "var(--primary)", color: "var(--primary-foreground)" }}
+              >
+                Oceń Nas
+              </a>
+              <a
+                href={MAPS_DIRECTIONS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center h-9 px-4 rounded-xl border transition hover:bg-white/10"
+                style={{ color: "var(--foreground)", borderColor: "var(--border)" }}
+              >
+                Nawiguj
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -61,7 +87,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
 
-      {/* ===== HERO — wideo tło, CTA idealnie wycentrowane ===== */}
+      {/* ===== HERO — wideo tło, CTA ===== */}
       <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Tło wideo */}
         <video
@@ -72,9 +98,9 @@ export default function Home() {
           loop
           playsInline
         />
-        {/* Overlay, by tekst był czytelny, ale film widoczny */}
+        {/* Overlay dla czytelności */}
         <div className="absolute inset-0 bg-black/35 pointer-events-none" />
-        {/* Subtelny vignette */}
+        {/* Delikatny vignette */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -83,7 +109,7 @@ export default function Home() {
           }}
         />
 
-        {/* Treść hero */}
+        {/* Treść */}
         <div className="relative z-10 px-6 max-w-4xl mx-auto text-center">
           <h1
             className="font-serif text-white leading-tight text-5xl md:text-7xl mb-4"
@@ -95,8 +121,8 @@ export default function Home() {
             Zapewniamy wyjątkowe doznania kulinarne, które na długo pozostaną w Twojej pamięci.
           </p>
 
-        {/* CTA — perfekcyjnie wycentrowane */}
-          <div className="mt-8 w-full">
+          {/* CTA */}
+          <div className="mt-8">
             <div className="mx-auto max-w-fit">
               <div className="flex items-center justify-center gap-4">
                 <a
@@ -119,7 +145,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== POZOSTAŁE SEKCJE ===== */}
+      {/* ===== SEKCJE ===== */}
       <main>
         <About />
         <Gallery />
@@ -127,7 +153,7 @@ export default function Home() {
         <MapWithOpinie />
       </main>
 
-      {/* ===== STOPKA — BORDOWY GRADIENT + GLOW ===== */}
+      {/* ===== STOPKA — bordowy gradient (bez „iskry”) ===== */}
       <footer className="relative mt-12">
         {/* miękki burgundowy glow nad stopką */}
         <div
@@ -156,7 +182,7 @@ export default function Home() {
           }}
         >
           <div className="relative mx-auto max-w-6xl px-4 py-7 text-center text-sm">
-            {/* subtelny top-glint w kolorze primary/bordo */}
+            {/* subtelny top-glint */}
             <div
               aria-hidden
               className="pointer-events-none absolute inset-x-4 top-0 h-px"
@@ -167,17 +193,7 @@ export default function Home() {
               }}
             />
 
-            {/* „iskra” po lewej — burgundowa */}
-            <div
-              aria-hidden
-              className="absolute left-6 top-6 h-5 w-5 rounded-full"
-              style={{
-                background:
-                  "conic-gradient(from 210deg at 50% 50%, #e04875, #b61d47, #7f1030, #e04875)",
-                boxShadow: "0 0 28px 10px rgba(176, 24, 67, .35)",
-                filter: "saturate(1.05)",
-              }}
-            />
+            {/* USUNIĘTA „iskra” w stopce */}
 
             <div style={{ color: "var(--muted-foreground)" }}>
               © {new Date().getFullYear()} Restauracja Na Ludowej. Wszelkie prawa zastrzeżone.
@@ -192,8 +208,6 @@ export default function Home() {
                 className="font-semibold transition-[opacity,transform] hover:opacity-90 hover:translate-y-[-1px]"
                 style={{
                   color: "color-mix(in oklch, var(--primary, #e04875) 92%, black 8%)",
-                  textShadow:
-                    "0 0 0 transparent, 0 0 18px color-mix(in oklch, var(--primary, #e04875) 35%, transparent)",
                 }}
               >
                 bkubiak.dev
