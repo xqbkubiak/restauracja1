@@ -63,7 +63,7 @@ function MapWithOpinie() {
                 className="inline-flex items-center justify-center h-9 px-4 rounded-xl"
                 style={{ backgroundColor: "var(--primary)", color: "var(--primary-foreground)" }}
               >
-                Oceń Nas!
+                Odwiedź nas
               </a>
               <a
                 href={MAPS_DIRECTIONS_URL}
@@ -148,24 +148,29 @@ export default function Home() {
       {/* ===== SEKCJE ===== */}
       <main>
         <About />
+
         <Gallery />
-        <MenuSection />
+
+        {/* -> Sekcja MENU (cel przewijania) */}
+        <section id="menu" className="scroll-mt-24">
+          <MenuSection />
+        </section>
+
         <MapWithOpinie />
       </main>
 
-      {/* ===== STOPKA — bordowy gradient (bez „iskry”) ===== */}
-      <footer className="relative mt-12">
-        {/* miękki burgundowy glow nad stopką */}
+      {/* ===== STOPKA — burgundowy styl „jak na screenie” ===== */}
+      <footer className="relative mt-14">
+        {/* miękki glow nad stopką */}
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-16 left-1/2 h-40 w-[82%] -translate-x-1/2 blur-2xl"
+          className="pointer-events-none absolute -top-20 left-1/2 h-48 w-[84%] -translate-x-1/2 blur-3xl"
           style={{
             background:
-              "radial-gradient(60% 70% at 50% 0%, color-mix(in oklch, var(--primary, #a3133a) 32%, transparent) 0%, transparent 70%)",
+              "radial-gradient(50% 60% at 50% 0%, color-mix(in oklch, var(--primary, #a3133a) 28%, transparent) 0%, transparent 70%)",
           }}
         />
-
-        {/* cienka linia separująca */}
+        {/* cieniutka linia separująca */}
         <div
           className="h-px w-full"
           style={{
@@ -174,44 +179,59 @@ export default function Home() {
           }}
         />
 
-        {/* tło stopki z przejściem w dół (bordo) */}
+        {/* tło stopki z delikatnym vertical fade do bordo */}
         <div
+          className="relative"
           style={{
             background:
-              "linear-gradient(180deg, rgba(0,0,0,0) 0%, color-mix(in oklch, var(--card, var(--background)) 88%, black 12%) 55%, color-mix(in oklch, var(--card, var(--background)) 80%, #a3133a 20%) 100%)",
+              "linear-gradient(180deg, rgba(0,0,0,0) 0%, color-mix(in oklch, var(--card, var(--background)) 88%, black 12%) 55%, color-mix(in oklch, var(--card, var(--background)) 78%, #7f1030 22%) 100%)",
           }}
         >
-          <div className="relative mx-auto max-w-6xl px-4 py-7 text-center text-sm">
-            {/* subtelny top-glint */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-x-4 top-0 h-px"
-              style={{
-                background:
-                  "linear-gradient(90deg, transparent, color-mix(in oklch, var(--primary, #e04875) 60%, transparent) 40%, color-mix(in oklch, var(--primary, #e04875) 60%, transparent) 60%, transparent)",
-                opacity: 0.7,
-              }}
-            />
+          <div className="mx-auto max-w-6xl px-4 py-8 text-sm">
+            <div className="text-center">
+              <div style={{ color: "var(--muted-foreground)" }}>
+                © {new Date().getFullYear()} Restauracja Na Ludowej. Wszelkie prawa zastrzeżone.
+              </div>
 
-            {/* USUNIĘTA „iskra” w stopce */}
+              <div className="mt-2 inline-flex items-center gap-1.5">
+                <span style={{ color: "var(--foreground)" }}>Stworzone przez</span>
 
-            <div style={{ color: "var(--muted-foreground)" }}>
-              © {new Date().getFullYear()} Restauracja Na Ludowej. Wszelkie prawa zastrzeżone.
-            </div>
-
-            <div className="mt-2">
-              <span style={{ color: "var(--foreground)" }}>Stworzone przez </span>
-              <a
-                href="https://bkubiak.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold transition-[opacity,transform] hover:opacity-90 hover:translate-y-[-1px]"
-                style={{
-                  color: "color-mix(in oklch, var(--primary, #e04875) 92%, black 8%)",
-                }}
-              >
-                bkubiak.dev
-              </a>
+                {/* link z gradientem tekstu + subtelne podkreślenie */}
+                <a
+                  href="https://bkubiak.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold leading-none relative transition-transform hover:-translate-y-0.5"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, color-mix(in oklch, var(--primary,#e04875) 92%, black 8%), color-mix(in oklch, #e04875 88%, #a3133a 12%))",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    color: "transparent",
+                    textDecoration: "none",
+                  }}
+                >
+                  bkubiak.dev
+                  {/* underline gradient */}
+                  <span
+                    aria-hidden
+                    className="absolute left-0 right-0 -bottom-0.5 h-[1.5px] opacity-80"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, transparent 0%, color-mix(in oklch, var(--primary,#e04875) 70%, #000 30%) 15%, color-mix(in oklch, #e04875 70%, #a3133a 30%) 85%, transparent 100%)",
+                    }}
+                  />
+                  {/* subtelny glow w hoverze */}
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 rounded blur-md -z-10 opacity-0 hover:opacity-100 transition-opacity duration-200"
+                    style={{
+                      background:
+                        "radial-gradient(60% 120% at 50% 100%, color-mix(in oklch, var(--primary,#e04875) 25%, transparent), transparent 70%)",
+                    }}
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
