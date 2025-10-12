@@ -1,24 +1,16 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Manrope, Cormorant_Garamond } from "next/font/google"
-import { GeistMono } from "geist/font/mono"
+import { Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 
-/** Modern sans for UI/treść — podpinam pod --font-inter, żeby nic nie zmieniać w CSS */
-const manrope = Manrope({
+/** Globalna czcionka — Poppins */
+const poppins = Poppins({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
-})
-
-/** Elegancki serif dla nagłówków — podpinam pod --font-playfair */
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-playfair",
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
+  variable: "--font-poppins",
 })
 
 export const metadata: Metadata = {
@@ -33,7 +25,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pl">
-      <body className={`font-sans antialiased ${manrope.variable} ${cormorant.variable} ${GeistMono.variable}`}>
+      <body
+        className={`font-sans antialiased ${poppins.variable}`}
+      >
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

@@ -33,7 +33,6 @@ function MapWithOpinie() {
           className="bg-white"
           title="Mapa – Restauracja Na Ludowej"
         />
-        {/* Karta info w lewym dolnym rogu */}
         <div className="absolute left-4 bottom-4">
           <div
             className="rounded-2xl px-5 py-4 shadow-lg"
@@ -54,7 +53,6 @@ function MapWithOpinie() {
               <span style={{ color: "var(--muted-foreground)" }}>(438 opinii)</span>
             </div>
 
-            {/* Przyciski akcji */}
             <div className="mt-4 flex flex-wrap items-center gap-2">
               <a
                 href={MAPS_PLACE_URL}
@@ -63,7 +61,7 @@ function MapWithOpinie() {
                 className="inline-flex items-center justify-center h-9 px-4 rounded-xl"
                 style={{ backgroundColor: "var(--primary)", color: "var(--primary-foreground)" }}
               >
-                Odwiedź nas
+                Oceń nas
               </a>
               <a
                 href={MAPS_DIRECTIONS_URL}
@@ -117,9 +115,12 @@ export default function Home() {
           >
             Restauracja <span className="text-primary">Na Ludowej</span>
           </h1>
-          <p style={{ color: "var(--muted-foreground)" }} className="text-lg md:text-xl">
-            Zapewniamy wyjątkowe doznania kulinarne, które na długo pozostaną w Twojej pamięci.
-          </p>
+<p
+  style={{ color: "#e0e0e0" }}
+  className="text-lg md:text-xl"
+>
+  Zapewniamy wyjątkowe doznania kulinarne, które na długo pozostaną w Twojej pamięci.
+</p>
 
           {/* CTA */}
           <div className="mt-8">
@@ -212,7 +213,6 @@ export default function Home() {
                   }}
                 >
                   bkubiak.dev
-                  {/* underline gradient */}
                   <span
                     aria-hidden
                     className="absolute left-0 right-0 -bottom-0.5 h-[1.5px] opacity-80"
@@ -221,7 +221,6 @@ export default function Home() {
                         "linear-gradient(90deg, transparent 0%, color-mix(in oklch, var(--primary,#e04875) 70%, #000 30%) 15%, color-mix(in oklch, #e04875 70%, #a3133a 30%) 85%, transparent 100%)",
                     }}
                   />
-                  {/* subtelny glow w hoverze */}
                   <span
                     aria-hidden
                     className="absolute inset-0 rounded blur-md -z-10 opacity-0 hover:opacity-100 transition-opacity duration-200"
