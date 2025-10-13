@@ -36,14 +36,13 @@ export function Header() {
         <div className="flex items-center justify-between h-[84px] md:h-[112px]">
           {/* === LOGO === */}
           <Link href="#hero" aria-label="Na Ludowej — strona główna" className="flex items-center">
-            <div
-              className="
-                overflow-hidden grid place-items-center rounded-md
-                w-[160px] h-[74px]
-                md:w-[220px] md:h-[100px]
-              "
-              style={{ border: "1px solid var(--border)" }}
-            >
+<div
+  className="
+    grid place-items-center
+    w-[160px] h-[74px]
+    md:w-[220px] md:h-[100px]
+  "
+>
               {hasLogo ? (
                 <img
                   src="/logo.png"

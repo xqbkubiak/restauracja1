@@ -5,19 +5,13 @@ import { MenuSection } from "@/components/menu-section"
 import { About } from "@/components/about"
 import { Gallery } from "@/components/gallery"
 
-// --- Stałe lokalizacji ---
 const PLACE_NAME = "Restauracja Na Ludowej"
 const PLACE_ADDR = "Ludowa 9, 66-500 Strzelce Krajeńskie"
-
-// Link do wizytówki / opinii
 const MAPS_PLACE_URL =
   "https://www.google.com/maps/search/?api=1&query=Restauracja+Na+Ludowej+Ludowa+9+66-500+Strzelce+Kraje%C5%84skie"
-
-// Link do nawigacji (ustaw destination na adres)
 const MAPS_DIRECTIONS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=Ludowa+9,+66-500+Strzelce+Kraje%C5%84skie"
 
-// ——— Mapa z kartą (przyciski: Odwiedź nas, Nawiguj) ———
 function MapWithOpinie() {
   return (
     <section id="contact" className="relative max-w-6xl mx-auto px-4 md:px-6 py-12">
@@ -85,9 +79,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
 
-      {/* ===== HERO — wideo tło, CTA ===== */}
       <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
-        {/* Tło wideo */}
         <video
           className="absolute inset-0 w-full h-full object-cover opacity-70 blur-[1px] pointer-events-none"
           src="/2894881-hd_1920_1080_24fps.mp4"
@@ -96,9 +88,7 @@ export default function Home() {
           loop
           playsInline
         />
-        {/* Overlay dla czytelności */}
         <div className="absolute inset-0 bg-black/35 pointer-events-none" />
-        {/* Delikatny vignette */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -107,7 +97,6 @@ export default function Home() {
           }}
         />
 
-        {/* Treść */}
         <div className="relative z-10 px-6 max-w-4xl mx-auto text-center">
           <h1
             className="font-serif text-white leading-tight text-5xl md:text-7xl mb-4"
@@ -146,13 +135,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== SEKCJE ===== */}
       <main>
         <About />
 
         <Gallery />
 
-        {/* -> Sekcja MENU (cel przewijania) */}
         <section id="menu" className="scroll-mt-24">
           <MenuSection />
         </section>
@@ -160,9 +147,7 @@ export default function Home() {
         <MapWithOpinie />
       </main>
 
-      {/* ===== STOPKA — burgundowy styl „jak na screenie” ===== */}
       <footer className="relative mt-14">
-        {/* miękki glow nad stopką */}
         <div
           aria-hidden
           className="pointer-events-none absolute -top-20 left-1/2 h-48 w-[84%] -translate-x-1/2 blur-3xl"
@@ -171,7 +156,6 @@ export default function Home() {
               "radial-gradient(50% 60% at 50% 0%, color-mix(in oklch, var(--primary, #a3133a) 28%, transparent) 0%, transparent 70%)",
           }}
         />
-        {/* cieniutka linia separująca */}
         <div
           className="h-px w-full"
           style={{
@@ -180,7 +164,6 @@ export default function Home() {
           }}
         />
 
-        {/* tło stopki z delikatnym vertical fade do bordo */}
         <div
           className="relative"
           style={{
@@ -196,8 +179,6 @@ export default function Home() {
 
               <div className="mt-2 inline-flex items-center gap-1.5">
                 <span style={{ color: "var(--foreground)" }}>Stworzone przez</span>
-
-                {/* link z gradientem tekstu + subtelne podkreślenie */}
                 <a
                   href="https://bkubiak.dev"
                   target="_blank"
