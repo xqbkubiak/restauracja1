@@ -79,6 +79,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
 
+      {/* ===== HERO ===== */}
       <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover opacity-70 blur-[1px] pointer-events-none"
@@ -104,12 +105,9 @@ export default function Home() {
           >
             Restauracja <span className="text-primary">Na Ludowej</span>
           </h1>
-<p
-  style={{ color: "#e0e0e0" }}
-  className="text-lg md:text-xl"
->
-  Zapewniamy wyjątkowe doznania kulinarne, które na długo pozostaną w Twojej pamięci.
-</p>
+          <p style={{ color: "#e0e0e0" }} className="text-lg md:text-xl">
+            Zapewniamy wyjątkowe doznania kulinarne, które na długo pozostaną w Twojej pamięci.
+          </p>
 
           {/* CTA */}
           <div className="mt-8">
@@ -135,9 +133,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== SEKCJE ===== */}
       <main>
         <About />
-
         <Gallery />
 
         <section id="menu" className="scroll-mt-24">
@@ -147,7 +145,9 @@ export default function Home() {
         <MapWithOpinie />
       </main>
 
+      {/* ===== STOPKA ===== */}
       <footer className="relative mt-14">
+        {/* miękki glow nad stopką */}
         <div
           aria-hidden
           className="pointer-events-none absolute -top-20 left-1/2 h-48 w-[84%] -translate-x-1/2 blur-3xl"
@@ -164,6 +164,7 @@ export default function Home() {
           }}
         />
 
+        {/* === TŁO STOPKI === */}
         <div
           className="relative"
           style={{
@@ -171,47 +172,70 @@ export default function Home() {
               "linear-gradient(180deg, rgba(0,0,0,0) 0%, color-mix(in oklch, var(--card, var(--background)) 88%, black 12%) 55%, color-mix(in oklch, var(--card, var(--background)) 78%, #7f1030 22%) 100%)",
           }}
         >
-          <div className="mx-auto max-w-6xl px-4 py-8 text-sm">
-            <div className="text-center">
-              <div style={{ color: "var(--muted-foreground)" }}>
-                © {new Date().getFullYear()} Restauracja Na Ludowej. Wszelkie prawa zastrzeżone.
-              </div>
+          <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-center">
+            <div style={{ color: "var(--muted-foreground)" }}>
+              © {new Date().getFullYear()} Restauracja Na Ludowej. Wszelkie prawa zastrzeżone.
+            </div>
 
-              <div className="mt-2 inline-flex items-center gap-1.5">
-                <span style={{ color: "var(--foreground)" }}>Stworzone przez</span>
-                <a
-                  href="https://bkubiak.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold leading-none relative transition-transform hover:-translate-y-0.5"
+            {/* === Ikony społecznościowe === */}
+            <div className="mt-5 flex justify-center gap-6">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="transition-transform hover:-translate-y-0.5 hover:scale-110 duration-300"
+                style={{
+                  color: "color-mix(in oklch, var(--primary) 70%, white 30%)",
+                }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
+                  <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.6c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4H15c-1.2 0-1.6.8-1.6 1.5v1.9H17l-.4 2.9h-2.2v7A10 10 0 0 0 22 12z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="transition-transform hover:-translate-y-0.5 hover:scale-110 duration-300"
+                style={{
+                  color: "color-mix(in oklch, var(--primary) 70%, white 30%)",
+                }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
+                  <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2.2A2.8 2.8 0 1 1 12 16a2.8 2.8 0 0 1 0-5.8zM17.8 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                </svg>
+              </a>
+            </div>
+
+            {/* === PODPIS NA SAMYM DOLE === */}
+            <div className="mt-8 inline-flex items-center justify-center gap-1.5 text-xs">
+              <span style={{ color: "var(--foreground)" }}>Stworzone przez</span>
+              <a
+                href="https://bkubiak.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold leading-none relative transition-transform hover:-translate-y-0.5"
+                style={{
+                  background:
+                    "linear-gradient(90deg, color-mix(in oklch, var(--primary,#e04875) 92%, black 8%), color-mix(in oklch, #e04875 88%, #a3133a 12%))",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                  textDecoration: "none",
+                }}
+              >
+                bkubiak.dev
+                <span
+                  aria-hidden
+                  className="absolute left-0 right-0 -bottom-0.5 h-[1.5px] opacity-80"
                   style={{
                     background:
-                      "linear-gradient(90deg, color-mix(in oklch, var(--primary,#e04875) 92%, black 8%), color-mix(in oklch, #e04875 88%, #a3133a 12%))",
-                    WebkitBackgroundClip: "text",
-                    backgroundClip: "text",
-                    color: "transparent",
-                    textDecoration: "none",
+                      "linear-gradient(90deg, transparent 0%, color-mix(in oklch, var(--primary,#e04875) 70%, #000 30%) 15%, color-mix(in oklch, #e04875 70%, #a3133a 30%) 85%, transparent 100%)",
                   }}
-                >
-                  bkubiak.dev
-                  <span
-                    aria-hidden
-                    className="absolute left-0 right-0 -bottom-0.5 h-[1.5px] opacity-80"
-                    style={{
-                      background:
-                        "linear-gradient(90deg, transparent 0%, color-mix(in oklch, var(--primary,#e04875) 70%, #000 30%) 15%, color-mix(in oklch, #e04875 70%, #a3133a 30%) 85%, transparent 100%)",
-                    }}
-                  />
-                  <span
-                    aria-hidden
-                    className="absolute inset-0 rounded blur-md -z-10 opacity-0 hover:opacity-100 transition-opacity duration-200"
-                    style={{
-                      background:
-                        "radial-gradient(60% 120% at 50% 100%, color-mix(in oklch, var(--primary,#e04875) 25%, transparent), transparent 70%)",
-                    }}
-                  />
-                </a>
-              </div>
+                />
+              </a>
             </div>
           </div>
         </div>

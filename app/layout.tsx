@@ -16,8 +16,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Restauracja Na Ludowej - Autentyczna Polska Kuchnia",
   description:
-    "Odkryj smaki tradycyjnej polskiej kuchni w Restauracji Na Ludowej. Serwujemy autentyczne dania przygotowane według tradycyjnych receptur.",
-  generator: "v0.app",
+    "Odkryj smaki tradycyjnej polskiej kuchni w Restauracji Na Ludowej. Serwujemy autentyczne dania przygotowane według tradycyjnych receptur."
 }
 
 export default function RootLayout({
