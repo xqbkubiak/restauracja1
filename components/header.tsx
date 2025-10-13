@@ -33,21 +33,20 @@ export function Header() {
       }}
     >
       <div className="container mx-auto px-4 md:px-6">
-        {/* nieco mniejszy pasek vs poprzednio */}
         <div className="flex items-center justify-between h-[84px] md:h-[112px]">
-          {/* === LOGO (zmniejszone) === */}
+          {/* === LOGO === */}
           <Link href="#hero" aria-label="Na Ludowej — strona główna" className="flex items-center">
             <div
               className="
                 overflow-hidden grid place-items-center rounded-md
-                w-[160px] h-[74px]          /* mobile */
-                md:w-[220px] md:h-[100px]    /* desktop ~220x100 */
+                w-[160px] h-[74px]
+                md:w-[220px] md:h-[100px]
               "
               style={{ border: "1px solid var(--border)" }}
             >
               {hasLogo ? (
                 <img
-                  src="/logo.png"                 // wrzuć swój plik do /public/logo.svg
+                  src="/logo.png"
                   alt="Restauracja Na Ludowej — logo"
                   className="w-full h-full object-contain"
                   width={220}
@@ -55,7 +54,10 @@ export function Header() {
                   onError={() => setHasLogo(false)}
                 />
               ) : (
-                <span className="font-serif" style={{ color: "var(--primary)", fontSize: "1.05rem" }}>
+                <span
+                  className="font-serif"
+                  style={{ color: "var(--primary)", fontSize: "1.05rem" }}
+                >
                   Na&nbsp;Ludowej
                 </span>
               )}
@@ -64,29 +66,27 @@ export function Header() {
 
           {/* === NAV (desktop) === */}
           <nav className="hidden md:flex items-center gap-10">
-            <button
-              onClick={() => scrollTo("about")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              O Nas
-            </button>
-            <button
-              onClick={() => scrollTo("menu")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Menu
-            </button>
-            <button
-              onClick={() => scrollTo("contact")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Kontakt
-            </button>
+            {[
+              { id: "about", label: "O Nas" },
+              { id: "menu", label: "Menu" },
+              { id: "contact", label: "Kontakt" },
+            ].map(({ id, label }) => (
+              <button
+                key={id}
+                onClick={() => scrollTo(id)}
+                className="relative text-foreground font-medium transition-colors duration-300 cursor-pointer
+                           hover:text-primary
+                           after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px]
+                           after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {label}
+              </button>
+            ))}
 
             {/* CTA -> telefon */}
             <a
-              href="tel:+48123456789" /* ← PODMIEŃ NA WŁAŚCIWY NUMER */
-              className="inline-flex items-center justify-center h-11 px-5 rounded-xl font-medium transition-all"
+              href="tel:+48123456789" // ← podmień na właściwy numer
+              className="inline-flex items-center justify-center h-11 px-5 rounded-xl font-medium transition-all hover:scale-[1.03]"
               style={{
                 backgroundColor: "var(--primary)",
                 color: "var(--primary-foreground)",
@@ -97,7 +97,7 @@ export function Header() {
             </a>
           </nav>
 
-          {/* === MENU (mobile) === */}
+          {/* === MENU (mobile toggle) === */}
           <button
             onClick={() => setIsMenuOpen((v) => !v)}
             className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
@@ -107,35 +107,34 @@ export function Header() {
           </button>
         </div>
 
-        {/* NAV mobile list */}
+        {/* === NAV (mobile list) === */}
         {isMenuOpen && (
           <nav
             className="md:hidden overflow-hidden"
             style={{ borderTop: "1px solid var(--border)" }}
           >
             <div className="flex flex-col gap-4 py-5">
-              <button
-                onClick={() => scrollTo("about")}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium py-1.5"
-              >
-                O Nas
-              </button>
-              <button
-                onClick={() => scrollTo("menu")}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium py-1.5"
-              >
-                Menu
-              </button>
-              <button
-                onClick={() => scrollTo("contact")}
-                className="text-left text-foreground hover:text-primary transition-colors font-medium py-1.5"
-              >
-                Kontakt
-              </button>
+              {[
+                { id: "about", label: "O Nas" },
+                { id: "menu", label: "Menu" },
+                { id: "contact", label: "Kontakt" },
+              ].map(({ id, label }) => (
+                <button
+                  key={id}
+                  onClick={() => scrollTo(id)}
+                  className="text-left text-foreground hover:text-primary transition-colors font-medium py-1.5"
+                >
+                  {label}
+                </button>
+              ))}
+
               <a
-                href="tel:+48123456789" /* ← PODMIEŃ NA WŁAŚCIWY NUMER */
+                href="tel:+48123456789"
                 className="inline-flex items-center justify-center h-12 px-6 rounded-xl font-medium"
-                style={{ backgroundColor: "var(--primary)", color: "var(--primary-foreground)" }}
+                style={{
+                  backgroundColor: "var(--primary)",
+                  color: "var(--primary-foreground)",
+                }}
                 aria-label="Zadzwoń do nas"
               >
                 Zadzwoń do nas
