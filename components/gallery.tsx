@@ -16,9 +16,9 @@ const dishes = [
     image: "/piersgrillowana.jpg",
   },
   {
-    name: "Żurek Staropolski",
-    description: "Na zakwasie z kiełbasą",
-    image: "/traditional-polish-zurek-soup-with-sausage-and-egg.jpg",
+    name: "Krem z pomidorów",
+    description: "Z mozzarellą, śmietaną i bazylią.",
+    image: "/kremzpomidorow.jpg",
   },
   {
     name: "Bigos",
