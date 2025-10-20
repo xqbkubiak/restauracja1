@@ -8,8 +8,8 @@ import { useInView } from "framer-motion"
 
 const menuCategories = [
   {
-    id: "appetizers",
-    name: "Przystawki",
+    id: "sniadania",
+    name: "Śniadania",
     items: [
       {
         name: "Jajecznica",
@@ -29,18 +29,18 @@ const menuCategories = [
     ],
   },
   {
-    id: "soups",
-    name: "Zupy",
+    id: "przystawki",
+    name: "Przystawki",
     items: [
       {
-        name: "Żurek Staropolski",
-        description: "Tradycyjny żurek na zakwasie z kiełbasą, jajkiem i chrzanem",
-        price: "16 zł",
+        name: "Łosoś",
+        description: "Placuszki z łososiem i sosem miodowo-musztardowym.",
+        price: "18 zł",
       },
       {
-        name: "Barszcz Czerwony",
-        description: "Klarowny barszcz z uszkami z grzybami",
-        price: "14 zł",
+        name: "Grzanki czosnkowe",
+        description: "Złociste grzanki z czosnkiem i oliwą z ziołami.",
+        price: "16 zł",
       },
       {
         name: "Rosół z Kury",
