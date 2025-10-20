@@ -134,8 +134,8 @@ const menuCategories = [
         name: "Kurczak w panco",
         description: "Chrupiący filet w panierce panco, ryż, świeże warzywa (marchew, ogórek, szpinak), sałatka wakame, sos sriracha-majo.",
         price: "40 zł",
-      },
-      ],
+},
+    ],
   },
   {
     id: "wieprzowina",
@@ -160,6 +160,27 @@ const menuCategories = [
         name: "Pierś wieprzowa",
         description: "Delikatna polędwica podana na młodych liściach szpinaku, z kremowym sosem śmietanowym, pieczonymi cząstkami ziemniaków i świeżymi warzywami z sosem vinegree.",
         price: "39 zł",
+      },
+    ],
+  },
+  {
+    id: "wolowina",
+    name: "Wołowina",
+    items: [
+      {
+        name: "Placek po węgiersku (mały)",
+        description: "Lekko pikantny gulasz wołowy z papryką, pieczarkami i ogórkiem, podany w chrupiącym placku z dodatkiem kwaśnej śmietany.",
+        price: "26 zł",
+      },
+      {
+        name: "Placek po węgiersku (duży)",
+        description: "Lekko pikantny gulasz wołowy z papryką, pieczarkami i ogórkiem, podany w chrupiącym placku z dodatkiem kwaśnej śmietany.",
+        price: "38 zł",
+      },
+      {
+        name: "Burger Wołowy Szefa",
+        description: "200g soczystej wołowiny, chrupiący boczek, jajko sadzone, świeży pomidor, ogórek konserwowy i słodka konfitowana cebula w bułce maślanej.",
+        price: "40 zł",
       },
     ],
   },
