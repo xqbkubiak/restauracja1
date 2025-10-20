@@ -6,7 +6,7 @@ import Image from "next/image"
 
 const dishes = [
   {
-    name: "Schabowy "Po Strzelecku",
+    name: "Schabowy Po Strzelecku",
     description: "w towarzystwie jajka sadzonego, świeżego szczypiorku, gotowanych ziemniaków i chrupiącej surówki",
     image: "/schabowypostrzelecku.jpg",
   },
