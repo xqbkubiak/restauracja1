@@ -181,6 +181,38 @@ const menuCategories = [
         name: "Burger Wołowy Szefa",
         description: "200g soczystej wołowiny, chrupiący boczek, jajko sadzone, świeży pomidor, ogórek konserwowy i słodka konfitowana cebula w bułce maślanej.",
         price: "40 zł",
+       },
+    ],
+  },
+  {
+    id: "salatki",
+    name: "Sałatki",
+    items: [
+      {
+        name: "Cezar",
+        description: "Klasyczna kompozycja świeżych sałat, pomidora, ogórka, grillowanego kurczaka, parmezanu i chrupiących grzanek, polana sosem czosnkowym.",
+        price: "34 zł",
+      },
+      {
+        name: "Grecka",
+        description: "Tradycyjna kompozycja świeżych warzyw: mix sałat, pomidor, ogórek, oliwki Kalamata, ser sałatkowy (feta) i czerwona cebula, skropiona lekkim sosem vinegret, podana z chrupiącą grzanką.",
+        price: "32 zł",
+      },
+    ],
+  },
+  {
+    id: "pierogi",
+    name: "Pierogi",
+    items: [
+      {
+        name: "Pierogi ruskie",
+        description: "Klasyczne pierogi z nadzieniem z ziemniaków i twarogu, podane z chrupiącą smażoną cebulką i świeżym szczypiorkiem.",
+        price: "24 zł",
+      },
+      {
+        name: "Pierogi mięsne",
+        description: "Ręcznie lepione pierogi z nadzieniem z pieczonej łopatki wieprzowej i kurczaka, podane z okrasą z cebuli i świeżą pietruszką.",
+        price: "24 zł",
       },
     ],
   },
