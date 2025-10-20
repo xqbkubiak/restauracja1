@@ -130,7 +130,7 @@ const menuCategories = [
 ]
 
 export function MenuSection() {
-  const [activeCategory, setActiveCategory] = useState("appetizers")
+  const [activeCategory, setActiveCategory] = useState("sniadania")
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
