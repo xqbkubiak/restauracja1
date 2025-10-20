@@ -11,9 +11,9 @@ const dishes = [
     image: "/schabowypostrzelecku.jpg",
   },
   {
-    name: "Schabowy z Kapustą",
-    description: "Panierowany kotlet",
-    image: "/polish-breaded-pork-cutlet-schabowy-with-cabbage.jpg",
+    name: "Pierś grillowana",
+    description: "z roztopioną mozzarellą i świeżym pomidorem, podana z chrupiącymi frytkami i kolorowym mixem sezonowych warzyw.",
+    image: "/piersgrillowana.jpg",
   },
   {
     name: "Żurek Staropolski",
