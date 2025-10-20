@@ -26,9 +26,9 @@ const dishes = [
     image: "/plackiziemniaczane.jpg",
   },
   {
-    name: "Sernik",
-    description: "Klasyczny sernik",
-    image: "/traditional-polish-cheesecake-sernik-with-raisins.jpg",
+    name: "Polędwica wieprzowa",
+    description: "w towarzystwie aromatycznego sosu grzybowego, chrupiących placków rostee, świeżej pietruszki i lekkiej mieszanki warzyw z vinegree.",
+    image: "/poledwicawieprzowa.jpg",
   },
   {
     name: "Gołąbki",
