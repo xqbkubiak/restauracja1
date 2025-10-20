@@ -6,9 +6,9 @@ import Image from "next/image"
 
 const dishes = [
   {
-    name: "Pierogi Ruskie",
-    description: "Z serem i ziemniakami",
-    image: "/traditional-polish-pierogi-ruskie-with-sour-cream.jpg",
+    name: "Schabowy "Po Strzelecku",
+    description: "w towarzystwie jajka sadzonego, świeżego szczypiorku, gotowanych ziemniaków i chrupiącej surówki",
+    image: "/schabowypostrzelecku.jpg",
   },
   {
     name: "Schabowy z Kapustą",
