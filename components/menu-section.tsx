@@ -12,24 +12,19 @@ const menuCategories = [
     name: "Przystawki",
     items: [
       {
-        name: "Śledź w Oleju",
-        description: "Marynowany śledź z cebulą, podany z chlebem żytnim",
-        price: "18 zł",
+        name: "Jajecznica",
+        description: "Puszysta jajecznica na złocistym maśle, chrupiące pieczywo, sałatka z sosem vinegre",
+        price: "20 zł",
       },
       {
-        name: "Tatar Wołowy",
-        description: "Świeży tatar z wołowiny z kaparami, cebulą i żółtkiem",
-        price: "32 zł",
+        name: "Tosty (2szt)",
+        description: "Chrupiące tosty z roztopionym serem, szynką i świeżą sałatką w sosie vinegre.",
+        price: "20 zł",
       },
       {
-        name: "Smalec Domowy",
-        description: "Tradycyjny smalec ze skwarkami, ogórkiem kiszonym i chlebem",
-        price: "16 zł",
-      },
-      {
-        name: "Kaszanka z Cebulką",
-        description: "Grillowana kaszanka z karmelizowaną cebulą",
-        price: "22 zł",
+        name: "Tosty z burratą",
+        description: "Chrupiące tosty z burratą, pomidorem i pesto bazyliowym.",
+        price: "24 zł",
       },
     ],
   },
