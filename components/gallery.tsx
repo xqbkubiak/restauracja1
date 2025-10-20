@@ -21,9 +21,9 @@ const dishes = [
     image: "/kremzpomidorow.jpg",
   },
   {
-    name: "Bigos",
-    description: "Tradycyjny polski bigos",
-    image: "/traditional-polish-bigos-hunters-stew.jpg",
+    name: "Placki Ziemniaczane",
+    description: "Z kwaśną śmietaną.",
+    image: "/plackiziemniaczane.jpg",
   },
   {
     name: "Sernik",
