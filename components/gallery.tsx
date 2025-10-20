@@ -31,9 +31,9 @@ const dishes = [
     image: "/poledwicawieprzowa.jpg",
   },
   {
-    name: "Gołąbki",
-    description: "W sosie pomidorowym",
-    image: "/polish-golabki-cabbage-rolls-in-tomato-sauce.jpg",
+    name: "Łosoś",
+    description: "Placuszki z łososiem i sosem miodowo-musztardowym.",
+    image: "/losos.jpg",
   },
 ]
 
