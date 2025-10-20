@@ -76,28 +76,28 @@ const menuCategories = [
     ],
   },
   {
-    id: "desserts",
-    name: "Desery",
+    id: "placki",
+    name: "Placki ziemniaczane",
     items: [
       {
-        name: "Sernik Tradycyjny",
-        description: "Klasyczny sernik na kruchym spodzie z rodzynkami",
-        price: "16 zł",
-      },
-      {
-        name: "Szarlotka z Lodami",
-        description: "Ciepła szarlotka z lodami waniliowymi i bitą śmietaną",
+        name: "Placki klasyczne",
+        description: "Z kwaśną śmietaną.",
         price: "18 zł",
       },
       {
-        name: "Makowiec",
-        description: "Domowy makowiec z bakaliami",
-        price: "14 zł",
+        name: "Placki z sosem grzybowym",
+        description: "Polane aromatycznym sosem grzybowym.",
+        price: "24 zł",
       },
       {
-        name: "Pączki",
-        description: "Świeże pączki z nadzieniem różanym lub adwokatowym",
-        price: "8 zł",
+        name: "Placki z kurkami",
+        description: "Z kurkami i pietruszką.",
+        price: "26 zł",
+      },
+      {
+        name: "Schab w plackach",
+        description: "Schabowy w plackach z sosem grzybowym.",
+        price: "42 zł",
       },
     ],
   },
