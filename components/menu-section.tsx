@@ -216,6 +216,59 @@ const menuCategories = [
       },
     ],
   },
+  {
+    id: "makarony",
+    name: "Makarony",
+    items: [
+      {
+        name: "Makaron penne",
+        description: "Al dente penne z grillowanym kurczakiem, kremowym sosem grzybowym i świeżą pietruszką.",
+        price: "38 zł",
+      },
+      {
+        name: "Makaron Carbonare",
+        description: "Klasyczne spaghetti carbonara z jajkiem, chrupiącym podgardlem i dojrzałym parmezanem.",
+        price: "38 zł",
+    },
+    ],
+  },
+  {
+    id: "dladzieci",
+    name: "Dla Dzieci",
+    items: [
+      {
+        name: "Stripsy z kurczaka(2szt)",
+        description: "Chrupiące panierowane filety z kurczaka podane z frytkami i świeżą surówką.",
+        price: "22 zł",
+      },
+      {
+        name: "Paluszki rybne (3szt)",
+        description: "Chrupiące paluszki rybne podane z frytkami i świeżą surówką.",
+        price: "22 zł",
+      },
+      {
+        name: "Pierogi truskawkowe (8szt)",
+        description: "Letnie pierogi z sezonowymi truskawkami, podane z cukrem pudrem i śmietaną.",
+        price: "28 zł",
+      },
+    ],
+  },
+  {
+    id: "desery",
+    name: "Desery",
+    items: [
+      {
+        name: "Ciasto dnia",
+        description: "Zapytaj kelnera o dzisiejszy sezonowy wypiek.",
+        price: "18 zł",
+      },
+      {
+        name: "Deser Lodowy",
+        description: "3 gałki lodów (wybór smaków), bita śmietana, sos czekoladowy i sezonowe dodatki.",
+        price: "24 zł",
+      },
+    ],
+  },
 ]
 
 export function MenuSection() {
