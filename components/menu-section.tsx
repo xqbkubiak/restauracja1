@@ -135,6 +135,32 @@ const menuCategories = [
         description: "Chrupiący filet w panierce panco, ryż, świeże warzywa (marchew, ogórek, szpinak), sałatka wakame, sos sriracha-majo.",
         price: "40 zł",
       },
+      ],
+  },
+  {
+    id: "wieprzowina",
+    name: "Wieprzowina",
+    items: [
+      {
+        name: "Tradycyjny kotlet schabowy",
+        description: "Klasyka polskiej kuchni w najlepszym wydaniu – soczysty schabowy w złocistej panierce, podany z gotowanymi ziemniakami i świeżą surówką.",
+        price: "36 zł",
+      },
+      {
+        name: "Kotlet schabowy po strzelecku",
+        description: "Złocisty schabowy w towarzystwie jajka sadzonego, świeżego szczypiorku, gotowanych ziemniaków i chrupiącej surówki.",
+        price: "38 zł",
+      },
+      {
+        name: "Polędwica wieprzowa",
+        description: "Delikatna polędwica wieprzowa w towarzystwie aromatycznego sosu grzybowego, chrupiących placków rostee, świeżej pietruszki i lekkiej mieszanki warzyw z vinegree.",
+        price: "39 zł",
+      },
+      {
+        name: "Pierś wieprzowa",
+        description: "Delikatna polędwica podana na młodych liściach szpinaku, z kremowym sosem śmietanowym, pieczonymi cząstkami ziemniaków i świeżymi warzywami z sosem vinegree.",
+        price: "39 zł",
+      },
     ],
   },
 ]
