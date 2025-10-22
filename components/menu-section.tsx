@@ -42,16 +42,6 @@ const menuCategories = [
         description: "Złociste grzanki z czosnkiem i oliwą z ziołami.",
         price: "16 zł",
       },
-      {
-        name: "Rosół z Kury",
-        description: "Domowy rosół z makaronem i warzywami",
-        price: "12 zł",
-      },
-      {
-        name: "Flaki Wołowe",
-        description: "Flaki wołowe w aromatycznym bulionie z warzywami",
-        price: "18 zł",
-      },
     ],
   },
   {
