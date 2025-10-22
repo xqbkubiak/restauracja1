@@ -48,7 +48,7 @@ export function About() {
             Witamy w Naszej Restauracji
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground text-pretty leading-relaxed">
-            Od ponad 20 lat serwujemy autentyczne polskie potrawy przygotowane według tradycyjnych receptur. Każde danie
+            Od ponad 10 lat serwujemy autentyczne polskie potrawy przygotowane według tradycyjnych receptur. Każde danie
             to hołd dla naszego dziedzictwa kulinarnego, przygotowane z pasją i najświeższych składników.
           </p>
         </motion.div>
