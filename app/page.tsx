@@ -216,7 +216,7 @@ export default function Home() {
             <div className="mx-auto max-w-fit">
               <div className="flex items-center justify-center gap-4">
                 <motion.a
-                  href="#reservation"
+                  href="tel:+48500611633"
                   className="inline-flex items-center justify-center h-12 px-6 rounded-xl"
                   style={{ backgroundColor: "var(--primary)", color: "var(--primary-foreground)" }}
                   variants={buttonVariants}
