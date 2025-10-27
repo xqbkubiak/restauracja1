@@ -33,7 +33,7 @@ const menuCategories = [
     name: "Przystawki",
     items: [
       {
-        name: "Łosoś",
+        name: "Łosoś wędzony",
         description: "Placuszki z łososiem i sosem miodowo-musztardowym.",
         price: "18 zł",
       },
@@ -51,12 +51,12 @@ const menuCategories = [
       {
         name: "Rosół wiejski",
         description: "Tradycyjny rosół z mięsem i warzywami.",
-        price: "12 zł",
+        price: "13 zł",
       },
       {
         name: "Krem z pomidorów",
         description: "Z mozzarellą, śmietaną i bazylią.",
-        price: "18 zł",
+        price: "20 zł",
       },
       {
         name: "Krem sezonowy",
@@ -72,17 +72,17 @@ const menuCategories = [
       {
         name: "Placki klasyczne",
         description: "Z kwaśną śmietaną.",
-        price: "18 zł",
+        price: "22 zł",
       },
       {
         name: "Placki z sosem grzybowym",
         description: "Polane aromatycznym sosem grzybowym.",
-        price: "24 zł",
+        price: "26 zł",
       },
       {
         name: "Placki z kurkami",
         description: "Z kurkami i pietruszką.",
-        price: "26 zł",
+        price: "28 zł",
       },
       {
         name: "Schab w plackach",
@@ -93,12 +93,12 @@ const menuCategories = [
   },
   {
     id: "kurczak",
-    name: "Kurczk",
+    name: "Dania z drobiu",
     items: [
       {
         name: "Filet z kurczaka",
         description: "Grillowany filet z frytkami i surówką.",
-        price: "34 zł",
+        price: "35 zł",
       },
       {
         name: "De Volaille",
@@ -106,24 +106,19 @@ const menuCategories = [
         price: "38 zł",
       },
       {
-        name: "Pierś grillowana",
+        name: "Grillowana pierś",
         description: "Soczysta pierś z kurczaka z roztopioną mozzarellą i świeżym pomidorem, podana z chrupiącymi frytkami i kolorowym mixem sezonowych warzyw.",
-        price: "38 zł",
+        price: "39 zł",
       },
       {
-        name: "Pierś grillowana",
+        name: "Grillowana pierś",
         description: "Delikatna, grillowana pierś kurczaka w towarzystwie młodego szpinaku, kremowego sosu śmietanowego i aromatycznych, pieczonych cząstek ziemniaków.",
-        price: "38 zł",
+        price: "39 zł",
       },
       {
-        name: "Pierś grillowana",
-        description: "Soczysta pierś kurczaka z chrupiącymi frytkami z batatów, świeżym mixem warzyw i orzeźwiającym sosem tzatziki.",
+        name: "Kaczka z kluskami śląskimi",
+        description: "Soczysta, pieczona kaczka o złocistej, chrupiącej skórce, doprawiona aromatycznymi ziołami i pieczona powoli, by zachować jej delikatność i głęboki smak.",
         price: "38 zł",
-      },
-      {
-        name: "Kurczak w panco",
-        description: "Chrupiący filet w panierce panco, ryż, świeże warzywa (marchew, ogórek, szpinak), sałatka wakame, sos sriracha-majo.",
-        price: "40 zł",
 },
     ],
   },
@@ -134,7 +129,7 @@ const menuCategories = [
       {
         name: "Tradycyjny kotlet schabowy",
         description: "Klasyka polskiej kuchni w najlepszym wydaniu – soczysty schabowy w złocistej panierce, podany z gotowanymi ziemniakami i świeżą surówką.",
-        price: "36 zł",
+        price: "35 zł",
       },
       {
         name: "Kotlet schabowy po strzelecku",
@@ -147,7 +142,7 @@ const menuCategories = [
         price: "39 zł",
       },
       {
-        name: "Pierś wieprzowa",
+        name: "Polędwica wieprzowa",
         description: "Delikatna polędwica podana na młodych liściach szpinaku, z kremowym sosem śmietanowym, pieczonymi cząstkami ziemniaków i świeżymi warzywami z sosem vinegree.",
         price: "39 zł",
       },
@@ -160,12 +155,12 @@ const menuCategories = [
       {
         name: "Placek po węgiersku (mały)",
         description: "Lekko pikantny gulasz wołowy z papryką, pieczarkami i ogórkiem, podany w chrupiącym placku z dodatkiem kwaśnej śmietany.",
-        price: "26 zł",
+        price: "30 zł",
       },
       {
         name: "Placek po węgiersku (duży)",
         description: "Lekko pikantny gulasz wołowy z papryką, pieczarkami i ogórkiem, podany w chrupiącym placku z dodatkiem kwaśnej śmietany.",
-        price: "38 zł",
+        price: "40 zł",
       },
       {
         name: "Burger Wołowy Szefa",
@@ -175,18 +170,29 @@ const menuCategories = [
     ],
   },
   {
+    id: "ryby",
+    name: "ryby",
+    items: [
+      {
+        name: "Sanadacz z grilla",
+        description: "Delikatny, grillowany filet z sandacza o złocistej skórce, podawany z chrupiącymi frytkami i świeżym mixem sałat. Lekka, a zarazem sycąca propozycja w klasycznym wydaniu.",
+        price: "59 zł",
+      },
+    ],
+  },
+  {
     id: "salatki",
     name: "Sałatki",
     items: [
       {
         name: "Cezar",
         description: "Klasyczna kompozycja świeżych sałat, pomidora, ogórka, grillowanego kurczaka, parmezanu i chrupiących grzanek, polana sosem czosnkowym.",
-        price: "34 zł",
+        price: "36 zł",
       },
       {
-        name: "Grecka",
-        description: "Tradycyjna kompozycja świeżych warzyw: mix sałat, pomidor, ogórek, oliwki Kalamata, ser sałatkowy (feta) i czerwona cebula, skropiona lekkim sosem vinegret, podana z chrupiącą grzanką.",
-        price: "32 zł",
+        name: "Sałatka z tuńczykiem",
+        description: "Lekka, a jednocześnie sycąca kompozycja świeżych warzyw, delikatnego tuńczyka i jajka na twardo.",
+        price: "36 zł",
       },
     ],
   },
@@ -197,12 +203,12 @@ const menuCategories = [
       {
         name: "Pierogi ruskie",
         description: "Klasyczne pierogi z nadzieniem z ziemniaków i twarogu, podane z chrupiącą smażoną cebulką i świeżym szczypiorkiem.",
-        price: "24 zł",
+        price: "28 zł",
       },
       {
         name: "Pierogi mięsne",
         description: "Ręcznie lepione pierogi z nadzieniem z pieczonej łopatki wieprzowej i kurczaka, podane z okrasą z cebuli i świeżą pietruszką.",
-        price: "24 zł",
+        price: "30 zł",
       },
     ],
   },
@@ -216,9 +222,9 @@ const menuCategories = [
         price: "38 zł",
       },
       {
-        name: "Makaron Carbonare",
-        description: "Klasyczne spaghetti carbonara z jajkiem, chrupiącym podgardlem i dojrzałym parmezanem.",
-        price: "38 zł",
+        name: "Makaron Bolognese",
+        description: "Tradycyjny włoski makaron z aromatycznym sosem z mielonego mięsa, pomidorów i ziół, posypany świeżym parmezanem.",
+        price: "36 zł",
     },
     ],
   },
@@ -227,19 +233,19 @@ const menuCategories = [
     name: "Dla Dzieci",
     items: [
       {
-        name: "Stripsy z kurczaka(2szt)",
+        name: "Stripsy z kurczaka(3szt)",
         description: "Chrupiące panierowane filety z kurczaka podane z frytkami i świeżą surówką.",
-        price: "22 zł",
+        price: "25 zł",
       },
       {
         name: "Paluszki rybne (3szt)",
         description: "Chrupiące paluszki rybne podane z frytkami i świeżą surówką.",
-        price: "22 zł",
+        price: "24 zł",
       },
       {
         name: "Pierogi truskawkowe (8szt)",
         description: "Letnie pierogi z sezonowymi truskawkami, podane z cukrem pudrem i śmietaną.",
-        price: "28 zł",
+        price: "24 zł",
       },
     ],
   },
