@@ -119,7 +119,7 @@ const menuCategories = [
         name: "Kaczka z kluskami śląskimi",
         description: "Soczysta, pieczona kaczka o złocistej, chrupiącej skórce, doprawiona aromatycznymi ziołami i pieczona powoli, by zachować jej delikatność i głęboki smak.",
         price: "38 zł",
-},
+      },
     ],
   },
   {
@@ -166,15 +166,15 @@ const menuCategories = [
         name: "Burger Wołowy Szefa",
         description: "200g soczystej wołowiny, chrupiący boczek, jajko sadzone, świeży pomidor, ogórek konserwowy i słodka konfitowana cebula w bułce maślanej.",
         price: "40 zł",
-       },
+      },
     ],
   },
   {
     id: "ryby",
-    name: "ryby",
+    name: "Ryby",
     items: [
       {
-        name: "Sanadacz z grilla",
+        name: "Sandacz z grilla",
         description: "Delikatny, grillowany filet z sandacza o złocistej skórce, podawany z chrupiącymi frytkami i świeżym mixem sałat. Lekka, a zarazem sycąca propozycja w klasycznym wydaniu.",
         price: "59 zł",
       },
@@ -225,7 +225,7 @@ const menuCategories = [
         name: "Makaron Bolognese",
         description: "Tradycyjny włoski makaron z aromatycznym sosem z mielonego mięsa, pomidorów i ziół, posypany świeżym parmezanem.",
         price: "36 zł",
-    },
+      },
     ],
   },
   {
@@ -233,7 +233,7 @@ const menuCategories = [
     name: "Dla Dzieci",
     items: [
       {
-        name: "Stripsy z kurczaka(3szt)",
+        name: "Stripsy z kurczaka (3szt)",
         description: "Chrupiące panierowane filety z kurczaka podane z frytkami i świeżą surówką.",
         price: "25 zł",
       },
@@ -275,7 +275,7 @@ export function MenuSection() {
   const currentCategory = menuCategories.find((cat) => cat.id === activeCategory)
 
   return (
-    <section id="menu" className="py-32 bg-background relative overflow-hidden">
+    <section id="menu" className="py-20 lg:py-32 bg-background relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-40 right-20 w-96 h-96 bg-primary rounded-full blur-3xl" />
       </div>
@@ -285,44 +285,53 @@ export function MenuSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-foreground mb-6">Nasze Menu</h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-4 lg:mb-6">
+            Nasze Menu
+          </h2>
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty px-4">
             Odkryj bogactwo smaków polskiej kuchni. Każde danie przygotowane z pasją i dbałością o szczegóły.
           </p>
         </motion.div>
 
-        {/* Category Tabs */}
+        {/* Category Tabs - Improved responsive design */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 mb-16"
+          className="mb-12 lg:mb-16"
         >
-          {menuCategories.map((category, index) => (
-            <motion.div
-              key={category.id}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button
-                variant={activeCategory === category.id ? "default" : "outline"}
-                size="lg"
-                onClick={() => setActiveCategory(category.id)}
-                className={
-                  activeCategory === category.id
-                    ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20"
-                    : "bg-card/50 backdrop-blur-sm text-foreground border-border hover:bg-card hover:border-primary/50"
-                }
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 max-w-6xl mx-auto">
+            {menuCategories.map((category, index) => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex-shrink-0"
               >
-                {category.name}
-              </Button>
-            </motion.div>
-          ))}
+                <Button
+                  variant={activeCategory === category.id ? "default" : "outline"}
+                  size="sm"
+                  className={`
+                    text-xs md:text-sm lg:text-base px-3 py-2 h-auto min-h-0
+                    whitespace-nowrap transition-all duration-200
+                    ${
+                      activeCategory === category.id
+                        ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 font-semibold"
+                        : "bg-card/50 backdrop-blur-sm text-foreground border-border hover:bg-card hover:border-primary/50 hover:text-primary font-medium"
+                    }
+                  `}
+                  onClick={() => setActiveCategory(category.id)}
+                >
+                  {category.name}
+                </Button>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Menu Items */}
@@ -334,7 +343,7 @@ export function MenuSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="grid gap-6"
+              className="grid gap-4 md:gap-6 px-2 sm:px-0"
             >
               {currentCategory?.items.map((item, index) => (
                 <MenuItem
