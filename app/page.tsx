@@ -31,7 +31,7 @@ function MapWithOpinie() {
         transition={{ type: "spring", stiffness: 300 }}
       >
         <iframe
-          src="https://www.google.com/maps?q=Ludowa+9,+66-500+Strzelce+Kraje%C5%84skie&output=embed"
+          src="https://maps.google.com/maps?q=Restauracja%20Na%20Ludowej,%20Ludowa%209,%2066-500%20Strzelce%20Krajeńskie&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="420"
           style={{ border: 0 }}
