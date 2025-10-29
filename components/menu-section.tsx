@@ -13,18 +13,7 @@ const menuCategories = [
     items: [
       {
         name: "Jajecznica",
-        description: "Puszysta jajecznica na złocistym maśle, chrupiące pieczywo, sałatka z sosem vinegre",
-        price: "20 zł",
-      },
-      {
-        name: "Tosty (2szt)",
-        description: "Chrupiące tosty z roztopionym serem, szynką i świeżą sałatką w sosie vinegre.",
-        price: "20 zł",
-      },
-      {
-        name: "Tosty z burratą",
-        description: "Chrupiące tosty z burratą, pomidorem i pesto bazyliowym.",
-        price: "24 zł",
+        description: "Informacje u kelnera",
       },
     ],
   },
