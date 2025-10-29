@@ -340,7 +340,7 @@ export default function Home() {
               variants={itemVariants}
             >
               <motion.a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/restauracjanaludowej/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -360,7 +360,7 @@ export default function Home() {
                 </svg>
               </motion.a>
               <motion.a
-                href="https://www.instagram.com/"
+                href="https://www.facebook.com/restauracjanaludowej"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
