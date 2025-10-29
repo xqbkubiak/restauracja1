@@ -206,39 +206,28 @@ export default function Home() {
             Zapewniamy wyjątkowe doznania kulinarne, które na długo pozostaną w Twojej pamięci.
           </motion.p>
 
-          {/* CTA */}
-          <motion.div 
-            className="mt-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-          >
-            <div className="mx-auto max-w-fit">
-              <div className="flex items-center justify-center gap-4">
-                <motion.a
-                  href="tel:+48500611633"
-                  className="inline-flex items-center justify-center h-12 px-6 rounded-xl"
-                  style={{ backgroundColor: "var(--primary)", color: "var(--primary-foreground)" }}
-                  variants={buttonVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                >
-                  Rezerwuj Stolik
-                </motion.a>
-                <motion.a
-                  href="#menu"
-                  className="inline-flex items-center justify-center h-12 px-6 rounded-xl border hover:bg-white/10 transition"
-                  style={{ color: "#fff", borderColor: "rgba(255,255,255,.3)" }}
-                  variants={buttonVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                >
-                  Zobacz Menu
-                </motion.a>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
+{/* CTA */}
+<motion.div 
+  className="mt-8"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.9 }}
+>
+  <div className="mx-auto max-w-fit">
+    <div className="flex items-center justify-center gap-4">
+      <motion.a
+        href="#menu"
+        className="inline-flex items-center justify-center h-12 px-6 rounded-xl border hover:bg-white/10 transition"
+        style={{ color: "#fff", borderColor: "rgba(255,255,255,.3)" }}
+        variants={buttonVariants}
+        whileHover="hover"
+        whileTap="tap"
+      >
+        Zobacz Menu
+      </motion.a>
+    </div>
+  </div>
+</motion.div>
 
         {/* Scroll indicator */}
         <motion.div
