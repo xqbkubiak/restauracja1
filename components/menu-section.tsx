@@ -12,8 +12,8 @@ const menuCategories = [
     name: "Śniadania",
     items: [
       {
-        name: "Jajecznica",
-        description: "Informacje u kelnera",
+        name: "Informacje",
+        description: "Nie mamy stałej karty śniadań – nasi kelnerzy podadzą Wam dzisiejsze, świeże propozycje.",
       },
     ],
   },
@@ -151,11 +151,6 @@ const menuCategories = [
         description: "Lekko pikantny gulasz wołowy z papryką, pieczarkami i ogórkiem, podany w chrupiącym placku z dodatkiem kwaśnej śmietany.",
         price: "40 zł",
       },
-      {
-        name: "Burger Wołowy Szefa",
-        description: "200g soczystej wołowiny, chrupiący boczek, jajko sadzone, świeży pomidor, ogórek konserwowy i słodka konfitowana cebula w bułce maślanej.",
-        price: "40 zł",
-      },
     ],
   },
   {
@@ -177,6 +172,11 @@ const menuCategories = [
         name: "Cezar",
         description: "Klasyczna kompozycja świeżych sałat, pomidora, ogórka, grillowanego kurczaka, parmezanu i chrupiących grzanek, polana sosem czosnkowym.",
         price: "36 zł",
+      },
+      {
+        name: "Grecka",
+        description: "Tradycyjna sałatka grecka z serem typu feta, czerwoną cebulą, oliwkami, pomidorem, ogórkiem i mieszanką świeżych sałat, podawana z aromatycznym sosem winegret.",
+        price: "34 zł",
       },
       {
         name: "Sałatka z tuńczykiem",
