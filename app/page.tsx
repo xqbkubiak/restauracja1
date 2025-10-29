@@ -68,7 +68,7 @@ function MapWithOpinie() {
                 transition={{ duration: 2, repeat: Infinity }}
               >★</motion.span>
               <span className="font-semibold">4.5</span>
-              <span style={{ color: "var(--muted-foreground)" }}>(438 opinii)</span>
+              <span style={{ color: "var(--muted-foreground)" }}>(446 opinii)</span>
             </div>
 
             <div className="mt-4 flex flex-wrap items-center gap-2">
