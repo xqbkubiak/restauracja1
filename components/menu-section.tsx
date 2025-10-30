@@ -86,7 +86,7 @@ const menuCategories = [
     items: [
       {
         name: "Filet z kurczaka",
-        description: "Grillowany filet z frytkami i surówką.",
+        description: "Klasyka polskiej kuchni w najlepszym wydaniu – soczysty filet z kurczaka w złocistej panierce.",
         price: "35 zł",
       },
       {
