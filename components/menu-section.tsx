@@ -86,7 +86,7 @@ const menuCategories = [
     items: [
       {
         name: "Filet z kurczaka",
-        description: "Klasyka polskiej kuchni w najlepszym wydaniu – soczysty filet z kurczaka w złocistej panierce.",
+        description: "Soczysty filet z kurczaka w złocistej panierce, podawany z domową surówką i ziemniakami.",
         price: "35 zł",
       },
       {

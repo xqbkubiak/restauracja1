@@ -84,7 +84,7 @@ export function Header() {
 
             {/* CTA -> telefon */}
             <a
-              href="tel:+48123456789" // ← podmień na właściwy numer
+              href="tel:+48 500 611 633" // ← podmień na właściwy numer
               className="inline-flex items-center justify-center h-11 px-5 rounded-xl font-medium transition-all hover:scale-[1.03]"
               style={{
                 backgroundColor: "var(--primary)",
