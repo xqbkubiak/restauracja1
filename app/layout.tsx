@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description: "Odkryj smaki tradycyjnej polskiej kuchni w Restauracji Na Ludowej. Serwujemy autentyczne dania przygotowane według tradycyjnych receptur.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Restauracja Na Ludowej w Strzelcach Krajeńskich",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Restauracja Na Ludowej - Tradycyjna Polska Kuchnia",
     description: "Autentyczna polska kuchnia w Strzelcach Krajeńskich. Restauracja Na Ludowej zaprasza!",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -115,7 +115,7 @@ function RestaurantStructuredData() {
     ],
     "hasMenu": "https://restauracjanaludowej.pl/#menu",
     "acceptsReservations": true,
-    "image": "https://restauracjanaludowej.pl/og-image.jpg",
+    "image": "https://restauracjanaludowej.pl/og-image.png",
     "sameAs": [
       "https://www.facebook.com/restauracjanaludowej/", // 🚨 ZMIEŃ na prawdziwy FB!
       "https://www.facebook.com/restauracjanaludowej" // 🚨 ZMIEŃ na prawdziwy IG!
