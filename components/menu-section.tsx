@@ -13,7 +13,7 @@ const menuCategories = [
     items: [
       {
         name: "Informacje",
-        description: "Nie mamy stałej karty śniadań – nasi kelnerzy podadzą Wam dzisiejsze, świeże propozycje.",
+        description: "Nie mamy stałej oferty śniadaniowej – nasi kelnerzy podadzą Wam dzisiejsze, świeże propozycje.",
       },
     ],
   },
