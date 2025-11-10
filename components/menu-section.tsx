@@ -107,7 +107,7 @@ const menuCategories = [
       {
         name: "Kaczka z kluskami śląskimi",
         description: "Soczysta, pieczona kaczka o złocistej, chrupiącej skórce, doprawiona aromatycznymi ziołami i pieczona powoli, by zachować jej delikatność i głęboki smak.",
-        price: "38 zł",
+        price: "49 zł",
       },
     ],
   },
